@@ -1,5 +1,7 @@
 {
   "item.looseends.example_item": "Example Item",
 
-  "block.looseends.example_block": "Example Block"
+  "block.looseends.example_block": "Example Block",
+  "block.looseends.test_block": "Block of Much Testing"
+
 }
