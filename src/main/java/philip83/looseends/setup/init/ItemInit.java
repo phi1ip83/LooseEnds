@@ -1,5 +1,6 @@
 package philip83.looseends.setup.init;
 
+import net.minecraft.item.BlockItem;
 import net.minecraft.item.Item;
 import net.minecraftforge.fml.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -10,4 +11,8 @@ public class ItemInit {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, LooseEnds.MODID);
 
     public static final RegistryObject<Item> EXAMPLE_ITEM = ITEMS.register("example_item", () -> new Item(new Item.Properties()));
+
+
+    //blocks
+    public static final RegistryObject<BlockItem> EXAMPLE_BLOCK = ITEMS.register("example_block", () ->new BlockItem(BlockInit.EXAMPLE_BLOCK.get(), new Item.Properties()));
 }

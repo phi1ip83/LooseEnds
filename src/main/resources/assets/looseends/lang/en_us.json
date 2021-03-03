@@ -1,3 +1,5 @@
 {
-  "item.looseends.example_item": "Example Item"
+  "item.looseends.example_item": "Example Item",
+
+  "block.looseends.example_block": "Example Block"
 }

@@ -1,0 +1,5 @@
+{
+  "variants": {
+    "": { "model": "looseends:block/example_block" }
+  }
+}

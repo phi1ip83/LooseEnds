@@ -8,6 +8,7 @@ import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import philip83.looseends.setup.Client;
 import philip83.looseends.setup.ModSetup;
+import philip83.looseends.setup.init.BlockInit;
 import philip83.looseends.setup.init.ItemInit;
 
 
@@ -23,6 +24,7 @@ public class LooseEnds {
         bus.addListener(Client::init);
 
         ItemInit.ITEMS.register(bus);
+        BlockInit.BLOCKS.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);
     }
