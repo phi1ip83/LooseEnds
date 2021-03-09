@@ -1,5 +1,7 @@
 {
   "variants": {
-    "": { "model": "looseends:block/test_block" }
+    "powered=false": { "model": "looseends:block/test_block" },
+    "powered=true": { "model": "looseends:block/test_block_lit" }
+
   }
 }
