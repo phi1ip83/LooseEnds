@@ -6,7 +6,6 @@ import net.minecraft.state.BooleanProperty;
 import net.minecraft.state.StateContainer;
 import net.minecraft.state.properties.BlockStateProperties;
 import net.minecraft.util.math.BlockPos;
-import net.minecraft.world.Explosion;
 import net.minecraft.world.IBlockReader;
 import net.minecraft.world.IWorld;
 import net.minecraft.world.World;
@@ -76,6 +75,7 @@ public class TestBlock extends Block {
         });
 
         world.setBlockState(pos, state.with(POWERED, !isPowered).with(TRIGGERED, false));
+
     }
 
     private void updateTouching(BlockPos pos, World world,  Set<BlockPos> previous){
@@ -121,8 +121,8 @@ public class TestBlock extends Block {
             if (flag != worldIn.isBlockPowered(pos) && blockIn != this.getBlock() && !worldIn.getBlockState(pos).get(TRIGGERED)) {
                 toggleState(state, worldIn, pos);
             }
-            if(isMoving){
-                LooseEnds.LOGGER.debug("Push!");
+            if(blockIn == this.getBlock() && this.getBlock() != worldIn.getBlockState(fromPos).getBlock() && !worldIn.isBlockPowered(pos)){
+                safeBreak(state, worldIn, pos);
             }
 
         }
